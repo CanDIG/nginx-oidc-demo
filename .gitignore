@@ -6,3 +6,4 @@
 *.csr
 .DS_Store
 .vscode
+.idea
