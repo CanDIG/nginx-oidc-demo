@@ -9,7 +9,6 @@ services:
     environment:
       KEYCLOAK_USER: kcadmin
       KEYCLOAK_PASSWORD: admin
-      KEYCLOAK_PASSWORD: admin
 
   tyk:
     container_name: tyk
@@ -28,3 +27,14 @@ services:
     image: redis:latest
     ports:
       - "6379:6379"
+
+  nginx:
+    container_name: nginx-oidc
+    build:
+      context: ./nginx
+    ports:
+      - "8081:8081"
+      - "8082:80"
+      - "8083:443"
+    links:
+      - "oidc:oidc"
