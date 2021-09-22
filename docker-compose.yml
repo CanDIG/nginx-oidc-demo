@@ -37,4 +37,4 @@ services:
       - "8082:80"
       - "8083:443"
     links:
-      - "oidc:oidc"
+      - "oidc:oidc"  # this hack is needed resolve oidc hostname
