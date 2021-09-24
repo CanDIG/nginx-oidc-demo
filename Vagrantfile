@@ -46,6 +46,7 @@ Vagrant.configure("2") do |config|
     sudo apt install -y docker-compose
 
     sudo apt install jq -y
+    sudo apt install git-lfs -y
 
   SHELL
 end
